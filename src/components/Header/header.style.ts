@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Container = styled.header`
   max-width: 1120px;
   margin: 0 auto;
+  margin-bottom: 2rem;
   background: #F0F2F5;
   display: flex;
   justify-content: center;

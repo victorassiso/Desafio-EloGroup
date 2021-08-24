@@ -1,5 +1,7 @@
+import { LeadsPanel } from "../../components/LeadsPanel/leadsPanel"
+
 export const Leads = (): JSX.Element => {
   return (
-    <h1>Leads Page</h1>
+    <LeadsPanel />
   );
 }

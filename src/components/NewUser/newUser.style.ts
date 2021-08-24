@@ -3,11 +3,12 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 1120px;
 `;
 
 export const Content = styled.form`
   border: 1px solid black;
-  margin-top: 2rem;
   max-width: 400px;
 
   img{
