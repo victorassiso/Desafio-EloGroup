@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Container, StyledLink } from './header.style'
+
 
 export const Header = (): JSX.Element => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to='/'>Sign up</Link>
-        </li>
-        <li>
-          <Link to='/leads'>Leads</Link>
-        </li>
-      </ul>
-    </nav>
+    <Container>
+      <button>
+        <StyledLink to='/'>Sign up</StyledLink>
+      </button>
+      <button>
+        <StyledLink to='/leads'>Leads</StyledLink>
+      </button>  
+    </Container>
   );
 }
