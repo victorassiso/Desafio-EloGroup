@@ -40,6 +40,7 @@ export const GlobalStyle = createGlobalStyle`
   background: #FFF;
   width: 100%;
   max-width: 800px;
+  margin: 1rem;
   padding: 1rem 2rem;
   position: relative;
   border-radius: 0.25rem;

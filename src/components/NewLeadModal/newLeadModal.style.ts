@@ -43,7 +43,23 @@ export const CheckBoxTable = styled.div`
   width: 50%;
   padding: 1rem;
 
+  table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  th{
+    border: 1px solid black;
+  }
   
+  td {
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  
+
   button{
     width: 100%;
     padding: 1rem;

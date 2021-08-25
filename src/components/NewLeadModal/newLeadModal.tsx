@@ -34,7 +34,48 @@ export function NewLeadModal({isOpen, onRequestClose}: NewLeadModalProps){
         <CheckBoxTable>
           <p>Oportunidades</p>
           <table>
-            <h1>Tabela</h1>
+            <tr>
+              <th>
+                <input type="checkbox" id="all" name="RPA"/>
+              </th>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="checkbox" id="RPA" name="RPA"/>
+              </td>
+              <td>
+                <label htmlFor="RPA">RPA</label>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+              <input type="checkbox" id="Produto Digital" name="Produto Digital"/>
+              </td>
+              <td>
+                <label htmlFor="Produto Digital">Produto Digital</label>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+              <input type="checkbox" id="Analytics" name="Analytics"/>
+              </td>
+              <td>
+                <label htmlFor="Analytics">Analytics</label>
+              </td>
+            </tr>
+              
+            <tr>
+              <td>
+              <input type="checkbox" id="BPM" name="BPM"/>
+              </td>
+              <td>
+                <label htmlFor="BPM">BPM</label>
+              </td>
+            </tr>
+
           </table>
           <button type='submit'>
             Salvar
