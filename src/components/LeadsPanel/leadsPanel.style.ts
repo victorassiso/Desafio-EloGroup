@@ -16,6 +16,11 @@ export const Content = styled.div`
     padding: 0.6rem 2.5rem;
     border: 0;
     margin: 1rem 2rem;
+
+    
+    &:hover{
+      filter: brightness(0.9);
+    }
   }
 `;
 
