@@ -39,8 +39,8 @@ export const GlobalStyle = createGlobalStyle`
 .NewTransactionModalContent{
   background: #FFF;
   width: 100%;
-  max-width: 576px;
-  padding: 3rem;
+  max-width: 800px;
+  padding: 1rem 2rem;
   position: relative;
   border-radius: 0.25rem;
   border: 1px solid black;

@@ -10,6 +10,7 @@ export const Container = styled.div`
 export const Content = styled.form`
   border: 1px solid black;
   max-width: 400px;
+  margin: 0 1rem;
 
   img{
     padding: 2rem 2rem 0 2rem;
@@ -29,12 +30,11 @@ export const Content = styled.form`
 
     input{
       width: 100%;
-      margin: 0.5rem 0;
+      margin: 0.8rem 0;
+     height: 2rem;
 
-      &:required{
-        border: 1px solid red;
-      }
     }
+
     button{
       margin-top: 1.5rem;
       padding: 1rem;

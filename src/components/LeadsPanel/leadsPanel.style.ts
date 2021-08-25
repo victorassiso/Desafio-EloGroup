@@ -5,10 +5,12 @@ export const Container = styled.div`
   justify-content: center;
   margin: 0 auto;
   max-width: 1120px;
+
 `;
 
 export const Content = styled.div`
   border: 1px solid black;
+  margin: 0 1rem;
 
   button{
     background: #2196F3;
