@@ -11,6 +11,7 @@ export const Container = styled.div`
 export const Content = styled.div`
   border: 1px solid black;
   margin: 0 1rem;
+  width: 60%;
 
   button{
     background: #2196F3;
@@ -40,6 +41,8 @@ export const Header = styled.header`
   }
 `;
 
-export const Table = styled.table`
-
+export const DndProviderContainer = styled.div`
+  display: flex;
+  max-width: 100%;
+  border: 1px solid black;
 `;

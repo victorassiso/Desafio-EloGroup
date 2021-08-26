@@ -1,4 +1,7 @@
-import { Container, Content, Header, Table } from "./leadsPanel.style";
+import { Container, Content, Header, DndProviderContainer} from "./leadsPanel.style";
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { DragDrop } from '../DragDrop/DragDrop';
 import logoImg from '../assets/logo.png'
 
 export interface LeadsPanelProps {
@@ -19,9 +22,13 @@ export function LeadsPanel({ onOpenNewLeadModal }: LeadsPanelProps) {
         >
           Novo Lead (+)
         </button>
-        <Table>
 
-        </Table>
+        <DndProviderContainer>
+          <DndProvider backend={HTML5Backend}>
+            <DragDrop />
+          </DndProvider>
+        </DndProviderContainer>
+      
       </Content>
     </Container>
   );
