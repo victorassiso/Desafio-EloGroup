@@ -1,5 +1,5 @@
 import { Container, Content, Header} from "./leadsPanel.style";
-import { DragDropTable } from '../DragDrop/Table/table';
+import { DndTable } from '../DragDrop/Table/table';
 import logoImg from '../assets/logo.png'
 
 export interface LeadsPanelProps {
@@ -21,7 +21,7 @@ export function LeadsPanel({ onOpenNewLeadModal }: LeadsPanelProps) {
           Novo Lead (+)
         </button>
 
-        <DragDropTable />
+        <DndTable />
 
       </Content>
     </Container>

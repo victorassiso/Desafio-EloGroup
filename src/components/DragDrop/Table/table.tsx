@@ -1,12 +1,10 @@
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { Container, Head, Body, HRow, TH } from './table.style';
-import { leads, LeadProps} from '../../../fakeBackend/fakeBackend';
+import { leads} from '../../../fakeBackend/fakeBackend';
 import { DndRows } from '../Rows/rows';
 
-export function DragDropTable(){
-  
-  const addClientNameToCell = (id: LeadProps["id"]) => {}
+export function DndTable(){
   
   return (
     <Container>
