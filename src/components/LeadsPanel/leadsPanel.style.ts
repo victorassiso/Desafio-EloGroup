@@ -41,8 +41,3 @@ export const Header = styled.header`
   }
 `;
 
-export const DndProviderContainer = styled.div`
-  display: flex;
-  max-width: 100%;
-  border: 1px solid black;
-`;
