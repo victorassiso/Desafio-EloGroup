@@ -2,6 +2,9 @@ import { Container, Content, Header} from "./leadsPanel.style";
 //import { DndTable } from '../DragDrop/Table/table';
 import logoImg from '../assets/logo.png'
 import Modal from 'react-modal';
+import { Rows } from "./Rows/rows";
+import { useState } from "react";
+
 
 Modal.setAppElement('#root');
 export interface LeadsPanelProps {
@@ -9,6 +12,10 @@ export interface LeadsPanelProps {
 }
 
 export function LeadsPanel({ onOpenNewLeadModal }: LeadsPanelProps) {
+  const [leads, setLeads] = useState([])
+
+
+
   return (
     <Container>
       <Content>
@@ -22,7 +29,7 @@ export function LeadsPanel({ onOpenNewLeadModal }: LeadsPanelProps) {
         >
           Novo Lead (+)
         </button>
-
+        
       </Content>
     </Container>
   );
