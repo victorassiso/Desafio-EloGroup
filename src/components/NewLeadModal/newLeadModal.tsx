@@ -111,6 +111,7 @@ export function NewLeadModal({isOpen, onRequestClose}: NewLeadModalProps){
           <input
             type="text"
             name="name"
+            required
             value={name}
             onChange={event => setName(event.target.value)}
             />
@@ -119,6 +120,7 @@ export function NewLeadModal({isOpen, onRequestClose}: NewLeadModalProps){
           <input
             type="text"
             name="telephone"
+            required
             value={telNumber}
             onChange={event => setTelNumber(event.target.value)}
             />
@@ -127,6 +129,7 @@ export function NewLeadModal({isOpen, onRequestClose}: NewLeadModalProps){
           <input
             type="text"
             name="email"
+            required
             value={email}
             onChange={event => setEmail(event.target.value)}
             />
