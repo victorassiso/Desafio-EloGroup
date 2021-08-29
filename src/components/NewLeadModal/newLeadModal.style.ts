@@ -16,13 +16,12 @@ export const Header = styled.header`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled.form`
   display: flex;
   justify-content: space-between;
-
 `;
 
-export const Form = styled.form`
+export const Text = styled.div`
   width: 40%;
   padding: 1rem;
 
@@ -36,7 +35,6 @@ export const Form = styled.form`
     margin: 0.8rem 0;
     height: 2rem;
   }
-
 `;
 
 export const CheckBoxTable = styled.div`

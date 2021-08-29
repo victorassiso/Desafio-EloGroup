@@ -7,7 +7,7 @@ export const Container = styled.div`
   max-width: 1120px;
 `;
 
-export const Content = styled.form`
+export const Content = styled.div`
   border: 1px solid black;
   max-width: 400px;
   margin: 0 1rem;

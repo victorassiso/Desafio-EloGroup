@@ -1,7 +1,9 @@
 import { Container, Content, Header} from "./leadsPanel.style";
 //import { DndTable } from '../DragDrop/Table/table';
 import logoImg from '../assets/logo.png'
+import Modal from 'react-modal';
 
+Modal.setAppElement('#root');
 export interface LeadsPanelProps {
   onOpenNewLeadModal: () => void;
 }
