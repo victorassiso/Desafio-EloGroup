@@ -3,6 +3,8 @@ import { FormEvent, useState } from 'react';
 import Modal from 'react-modal';
 import logoImg from '../assets/logo.png';
 import { CheckBoxTable, Content, Text, Header } from './newLeadModal.style';
+import { v4 as uuid} from 'uuid';
+import { loadLeads } from '../../services/api';
 
 interface NewLeadModalProps {
   isOpen: boolean;
@@ -57,11 +59,7 @@ export function NewLeadModal({isOpen, onRequestClose}: NewLeadModalProps){
   }
   
   function updateLocalStorageLeads(props: Lead){
-    const localStorageLeads = localStorage.getItem('leads');
-    
-    const leads = localStorageLeads == null
-      ? [props]
-      : [...JSON.parse(localStorageLeads), props]
+    const leads = loadLeads() //Carrega leads do local storage
     
     localStorage.setItem('leads', JSON.stringify(leads))
   }
@@ -71,7 +69,9 @@ export function NewLeadModal({isOpen, onRequestClose}: NewLeadModalProps){
     event.preventDefault();
     
     createOpportunities();
+    let id = uuid();
     const newLead = {
+      id,
       name,
       telNumber,
       email,

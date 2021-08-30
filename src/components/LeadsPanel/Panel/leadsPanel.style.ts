@@ -41,3 +41,21 @@ export const Header = styled.header`
   }
 `;
 
+export const Table = styled.div`
+  margin: 2rem;
+  border: 1px solid black;
+`;
+
+export const THead = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+
+`;
+
+export const Column = styled.div`
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid black;
+
+`;
