@@ -1,48 +1,49 @@
-export function loadColumns(){
-  return [
+const inicialLeads = [
+  {
+    id: '1',
+    name: 'Org. Internacionais',
+    telNumber: '+55 (21) 9 9999-9999',
+    email: 'email@exemplo.com', 
+    status: 'Cliente em Potencial',
+    opportunities: ["RPA", "Analytics"],
+  },
+  {
+    id: '2',
+    name: 'Ind. Farm. LTDA',
+    telNumber: '+55 (21) 9 9999-9999',
+    email: 'email@exemplo.com', 
+    status: 'Cliente em Potencial',
+    opportunities: ["Produto Digital", "Analytics"],
+  },
+  {
+    id: '3',
+    name: 'Musc. Sound Live Cmp',
+    telNumber: '+55 (21) 9 9999-9999',
+    email: 'email@exemplo.com', 
+    status: 'Cliente em Potencial',
+    opportunities: ["RPA", "Produto Digital", "BPM"],
+  }
+]
+
+const inicialData = [
     {
-      id: 1,
+      id: '1',
       name: 'Cliente em Potencial',
-      leads: [
-        {
-          id: '1',
-          name: 'Org. Internacionais',
-          telNumber: '+55 (21) 9 9999-9999',
-          email: 'email@exemplo.com', 
-          opportunities: ["RPA", "Analytics"]
-        },
-        {
-          id: '2',
-          name: 'Ind. Farm. LTDA',
-          telNumber: '+55 (21) 9 9999-9999',
-          email: 'email@exemplo.com', 
-          opportunities: ["Produto Digital", "Analytics"]
-
-        },
-        {
-          id: '3',
-          name: 'Musc. Sound Live Cmp',
-          telNumber: '+55 (21) 9 9999-9999',
-          email: 'email@exemplo.com', 
-          opportunities: ["RPA", "Produto Digital", "BPM"]
-
-        }
-      ]
+      leads: [...inicialLeads]
     },
     {
-      id: 2,
+      id: '2',
       name: 'Dados Confirmados',
       leads: []
     },
     {
-      id: 3,
+      id: '3',
       name: 'Reunião Agendada',
       leads: []
     }    
   ]
-}
 
-export function loadLeads(){
+export function downloadLeadsFromLocalStorage(){
   const localStorageLeads = localStorage.getItem('leads')
   const leads = localStorageLeads == null
   ? []
@@ -51,15 +52,13 @@ export function loadLeads(){
   return leads;
 }
 
-export function loadData(){
-  const leads = loadLeads()
-  const columns = loadColumns();
 
+export function loadInicialData(){
+  const localStorageleads = downloadLeadsFromLocalStorage()
   return {
-    leads: [...leads],
-    columns: [...columns]
+    columns: [...inicialData],
+    leads: [...localStorageleads]
   }
 }
 
-const data = loadData()
-console.log(data)
+

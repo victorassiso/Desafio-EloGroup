@@ -4,8 +4,6 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
-
-
   
   img {
     max-width: 15rem;

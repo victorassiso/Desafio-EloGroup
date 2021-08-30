@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Implementação do desafio técnico proposto durante o processo seletivo da EloGroup
+Implementação do desafio técnico proposto durante o processo seletivo da EloGroup.
 
 ## Scripts
 
@@ -10,4 +10,4 @@ Implementação do desafio técnico proposto durante o processo seletivo da EloG
 
 ## Observações
 
-Apesar dos meus esforços, o prazo para entrega do desafio terminou e ele está incompleto. A minha maior dificuldade foi na implementação da funcionalidade Drag and Drop no formato de tabela. Ao passar de alguns dias preso nessa etapa, não sobrou tempo para implementar outras funcionalidades mais simples. Acredito que esse tenha sido meu maior erro.
+O último commit foi feito após o prazo de entrega do desafio. No entanto, era uma questão de honra conseguir implementar o Drag and Drop. Ainda ficou faltando diversas coisas, mas eu estou apenas no começo do aprendizado, estou feliz pelo processo.

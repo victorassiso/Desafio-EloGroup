@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import Modal from 'react-modal';
 import logoImg from '../assets/logo.png';
 import { CheckBoxTable, Content, Text, Header } from './newLeadModal.style';
 import { v4 as uuid} from 'uuid';
-import { loadLeads } from '../../services/api';
+import { downloadLeadsFromLocalStorage } from '../../services/api';
 
 interface NewLeadModalProps {
   isOpen: boolean;
@@ -59,15 +59,12 @@ export function NewLeadModal({isOpen, onRequestClose}: NewLeadModalProps){
   }
   
   function updateLocalStorageLeads(props: Lead){
-    const leads = loadLeads() //Carrega leads do local storage
+    const leads = downloadLeadsFromLocalStorage()
     
-    localStorage.setItem('leads', JSON.stringify(leads))
+    localStorage.setItem('leads', JSON.stringify([...leads, props]))
   }
 
-  function handleCreateNewLead(event: FormEvent){
-    
-    event.preventDefault();
-    
+  function handleCreateNewLead(){
     createOpportunities();
     let id = uuid();
     const newLead = {
@@ -75,10 +72,12 @@ export function NewLeadModal({isOpen, onRequestClose}: NewLeadModalProps){
       name,
       telNumber,
       email,
+      status: 'Cliente em Potencial',
       opportunities,
     }
 
     updateLocalStorageLeads(newLead);
+    window.location.reload()
 
     //Reiniciando dados após submit
     setName('');
